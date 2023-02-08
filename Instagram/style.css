@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+ul {
+    list-style-type: none;
+}
+  
+html {
+    font-size: 70%;
+}
+  
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #fafafa;
+    margin: auto;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.log-in {
+    background: #ffffff;
+    width: 32rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1rem solid rgba(219, 219, 219);
+    padding: 1.5rem 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.bg-photo{
+    height: 581.15px;
+}
+
+.logo {
+    width: 17rem;
+    margin: 10px 0;
+}
+  
+
+.log-in-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.log-in-form input{
+    padding: 1rem 0 1rem 1rem;
+    border-radius: 2px;
+}
+
+.log-in-button{
+    padding: 7px 0;
+    border-radius: 8px;
+}
+
+.log-in-form input,
+.log-in-form input::placeholder {
+    font-size: 1.1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.log-in-form input{
+    background: #fafafa;
+    border: 0.1rem solid rgba(219, 219, 219);
+    outline: none;
+}
+
+.log-in-form input[type="text"] {
+    margin-bottom: 0.5rem;
+}
+
+.log-in-form input::placeholder {
+    color: #837979;
+  }
+
+  .log-in-form input:focus {
+    border-color: rgba(112, 112, 112, 0.8);
+  }
+
+  .log-in-button {
+    background: #0095f6;
+    color: #ffffff;
+    margin: 2rem 0;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+  
+
+  .or-divider {
+    color: #8e8e8e;
+    font-weight: 700;
+    position: relative;
+    font-size: 1.2rem;
+  }
+  
+  .or-divider:before,
+  .or-divider:after {
+    content: "";
+    display: block;
+    width: 11rem;
+    height: 0.1rem;
+    position: absolute;
+    background: rgba(112, 112, 112, 0.4);
+    top: 50%;
+  }
+  
+  .or-divider:before {
+    left: 3rem;
+  }
+  
+  .or-divider:after {
+    right: 3rem;
+  }
+
+  .fb-login {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .fb-login img,
+  .fb-login span {
+    vertical-align: middle;
+  }
+  
+  .fb-login img {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .fb-login span {
+    font-size: 1.3rem;
+    color: #385185;
+    font-weight: 700;
+  }
+
+  .forgot-password {
+    color: #385185;
+    font-size: 1.2rem;
+  }
+
+  .sign-up {
+    background: #ffffff;
+    width: 32rem;
+    margin: 0 auto;
+    margin-top: -13px;
+    border: 0.1rem solid rgba(219, 219, 219);
+    padding: 2rem;
+    text-align: center;
+  }
+
+.sign-up span {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+
+.sign-up a {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0095f6;
+  }
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+
+.get-the-app span {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+  }
+  
+.app-images img {
+    height: 40px;
+  }
+
+.google {
+    margin-right: 1rem;
+}
+
+.footer{
+  height: 25vh;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(142, 142, 142);
+  font-size: 12px;
+
+}
+
+.links{
+  margin-bottom: 20px;
+}
+
+.footer a{
+  color: inherit;
+  cursor: pointer;
+  padding: 0 7px;
+}
+
+.footer a:hover{
+  text-decoration: underline;
+}
+
+.s-link{
+  display: flex;
+}
+
+select{
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  width: 80px;
+}
