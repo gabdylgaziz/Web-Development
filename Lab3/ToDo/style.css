@@ -71,16 +71,32 @@ input[type = "text"]{
 }
 
 .task-list{
+    padding: 3%;
     width: 100%;
+}
+
+
+li{
+    padding: 0 5%;
 }
 
 li .mainli{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    border: 0.7px solid #dfdfdf;
+    border-radius: 3px;
 }
 
-
-li{
-    padding: 1% 6%;
+.aaa{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
+
+input:checked ~ p{
+    text-decoration: line-through;
+}
+

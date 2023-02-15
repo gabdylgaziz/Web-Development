@@ -1,17 +1,49 @@
+var tasks = []
+
+Window.onload = getItems()
+
+ 
+function getItems(){
+    const got = localStorage.getItem('todo');
+    if(got){
+        tasks = JSON.parse(got);
+    }
+    createTask()
+}
+
+
 function addTask(){
     let message = document.getElementById("taskInput").value
-    if(message){
-        let ul = document.getElementById("list"), li = document.createElement("li")
+    tasks.push(message)
+    createTask()
+}
+
+function createTask(){
+    let ul = document.getElementById("list")
+    ul.innerHTML = ""
+    tasks.forEach((task, index) => {
+        let li = document.createElement("li"), btn = document.createElement("button");
         li.innerHTML = `    
             <li>
                 <div class="mainli">
-                    <div>
-                        <input type="checkbox">${message}
+                    <div class="aaa">
+                        <input type="checkbox"><p>${task}</p>
                     </div>
-                    <button>Del</button>
                 </div>
             </li>
         `
+        btn.innerText = "Del";
+        btn.addEventListener("click", () => {
+            delTask(index);
+        });
+        li.appendChild(btn);
         ul.appendChild(li)
-    }
+
+    })
+    localStorage.setItem('todo', JSON.stringify(tasks));
+}
+
+function delTask(index){
+    tasks.splice(index, 1);
+    createTask();
 }
