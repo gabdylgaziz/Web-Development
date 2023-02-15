@@ -15,7 +15,3 @@ function addTask(){
         ul.appendChild(li)
     }
 }
-
-function delTask(){
-    
-}
