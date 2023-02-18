@@ -10,8 +10,8 @@ import { products } from '../products';
 export class ProductListComponent {
   products = products;
 
-  share(name: string) {
-    window.alert(`${name}`);
+  share(name: string, url: string) {
+    window.location.href = `https://t.me/share/url?url=Купи ${name} по очень выгодной цене!&text=${url}`
   }
 }
 

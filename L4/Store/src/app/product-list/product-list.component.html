@@ -14,12 +14,12 @@
     <p *ngIf="product.description">
       {{ product.description }}
     </p>
+    <div class="but">
+      <button type="button" (click)="share(product.name, product.url)">
+        Share
+      </button>
+    </div>
     
-    
-  
-    <button type="button" (click)="share(product.name)">
-      Share
-    </button>
   </div>
 </div>
 <!-- 
