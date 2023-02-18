@@ -1,21 +1,26 @@
 <h2>Products</h2>
 
-<div *ngFor="let product of products">
-
-  <h3>
-    <a [title]="product.name + ' details'">
-      {{ product.name }}
-    </a>
-  </h3>
-
-  <p *ngIf="product.description">
-    Description: {{ product.description }}
-  </p>
-
-  <button type="button" (click)="share()">
-    Share
-  </button>
-
+<div *ngFor="let product of products" class="prod">
+  <div class="image">
+    <img [src]="product.image">
+  </div>
+  <div class="item-info">
+    <h3>
+      <a [title]="product.name + ' details'">
+        {{ product.name }}
+      </a>
+    </h3>
+  
+    <p *ngIf="product.description">
+      {{ product.description }}
+    </p>
+    
+    
+  
+    <button type="button" (click)="share(product.name)">
+      Share
+    </button>
+  </div>
 </div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
