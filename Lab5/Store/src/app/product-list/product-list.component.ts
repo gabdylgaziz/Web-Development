@@ -17,12 +17,28 @@ export class ProductListComponent {
   }
 
   del(id: number){
-    
+    const nP = []
+    for(let i = 0; i < this.newProducts.length; i++){
+      if(this.newProducts[i].id != id){
+        nP.push(this.newProducts[i])
+      }
+    }
+    this.newProducts = nP
   }
   
-  like(){
-    console.log(this.newProducts)
+  like(id: number){
+    for(let i = 0; i < products.length; i++){
+      if(products[i].id == id){
+        if(!products[i].liked){
+          products[i].likes+=1
+          products[i].liked = true
+          break
+        }
+      }
+    }
   }
+
+  
 }
 
 

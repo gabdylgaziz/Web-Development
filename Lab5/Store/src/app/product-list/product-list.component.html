@@ -23,7 +23,7 @@
     <p>Amount of likes: {{product.likes}}</p>
     <div class="like">
       <div>
-        <a (click)="like()">
+        <a (click)="like(product.id)">
           <img src="assets/images/like.png">
         </a>
         <a (click)="del(product.id)">
