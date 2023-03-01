@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 
 import { products } from '../products';
 
@@ -8,9 +8,25 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css']
 })
 
-export class ProductListComponent {
+export class ProductListComponent implements OnInit, OnChanges{
+  @Input() item = '';
   products = products;
   newProducts = products;
+
+  ngOnInit(){
+
+  }
+
+  ngOnChanges(item: SimpleChanges) {
+    if(this.item == '' || this.item == 'None' || this.item == 'Все'){
+      this.newProducts = products
+      return
+    }
+    const np = this.products.filter((prod) => {
+      return prod.category == this.item
+    })
+    this.newProducts = np
+  }
 
   share(name: string, url: string) {
     window.location.href = `https://t.me/share/url?url=Купи ${name} по очень выгодной цене!&text=${url}`
@@ -36,6 +52,7 @@ export class ProductListComponent {
         }
       }
     }
+    console.log(this.item)
   }
 
   

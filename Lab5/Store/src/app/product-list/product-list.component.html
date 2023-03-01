@@ -1,4 +1,4 @@
-<div *ngFor="let product of newProducts" class="prod">
+<div *ngFor="let product of newProducts;" class="prod" onload="setCat()">
   <div class="image">
     <img [src]="product.image">
   </div>

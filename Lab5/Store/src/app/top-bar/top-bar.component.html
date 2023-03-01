@@ -8,7 +8,7 @@
         Все категории
         <div class="dropdown-content">
           <div *ngFor="let cat of categories">  
-              <a [routerLink]="['/category',cat.name]">
+              <a (click)="category(cat.name)">
                 {{ cat.name }} 
               </a>
           </div>
@@ -16,7 +16,9 @@
       </div>
     </li>
     <li>
-      Избранное
+      <a (click)="favourites()">
+        Избранное
+      </a>
     </li>
     <li>
       Корзина

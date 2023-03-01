@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter  } from '@angular/core';
 
 import { products } from '../products';
 import { categories } from '../category';
 
+let catte = 'None';
 
 @Component({
   selector: 'app-top-bar',
@@ -10,14 +11,18 @@ import { categories } from '../category';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent {
+  
   categories = categories
 
+  @Output() newItemEvent = new EventEmitter<string>();
+  
   category(name: string){
-    console.log(this)
-    for (let i = 0; i < products.length; i++) {
-      if(products[i].category == name){
-        alert(products[i].name)
-      }
-    }
+    this.newItemEvent.emit(name);
   }
+
+  favourites(){
+
+  }
+
+
 }

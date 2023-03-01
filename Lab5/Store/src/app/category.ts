@@ -19,7 +19,11 @@ export const categories = [
     {
         id: 4,
         name: "Бытовая техника"
-    } 
+    },
+    {
+        id: 5,
+        name: "Все"
+    }
 ];
   
   
