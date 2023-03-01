@@ -131,6 +131,138 @@ export const products = [
     likes: 0,
     liked: false,
     trash: false
+  },
+  {
+    id: 11,
+    name: "ASUS TUF FX706HE-HX010 90NR0713-M00990",
+    url: "https://kaspi.kz/shop/p/asus-tuf-fx706he-hx010-90nr0713-m00990-seryi-102789330/?c=750000000#!/item",
+    image: '/assets/images/asus-tuf.jpg',
+    description: 'Powerful Notebook',
+    rating: 5,
+    category: "Компьютеры и ноутбуки",
+    likes: 0,
+    liked: false,
+    trash: false
+  },
+  {
+    id: 12,
+    name: "HP Victus 16-e0008ur 489H1EA",
+    url: "https://kaspi.kz/shop/p/hp-victus-16-e0008ur-489h1ea-temno-seryi-107706136/?c=750000000#!/item",
+    image: '/assets/images/hp-victus.jpg',
+    description: 'Nice notebook from hp',
+    rating: 5,
+    category: "Компьютеры и ноутбуки",
+    likes: 0,
+    liked: false,
+    trash: false
+  },
+  {
+    id: 13,
+    name: "Lenovo Legion 5",
+    url: "https://kaspi.kz/shop/p/lenovo-legion-5-17ach6-82k000acrk-temno-sinii-107130212/?c=750000000#!/item",
+    image: '/assets/images/lenovo-legion.jpg',
+    description: 'Lenovo\'s Hitman',
+    rating: 5,
+    category: "Компьютеры и ноутбуки",
+    likes: 0,
+    liked: false,
+    trash: false
+  },
+  {
+    id: 14,
+    name: "Sup Game Box",
+    url: "https://kaspi.kz/shop/p/sup-game-box-geimpad-krasnyi-102509665/?c=750000000#!/item",
+    image: '/assets/images/game-box.jpg',
+    description: 'Sup Game Box + Gamepad red',
+    rating: 5,
+    category: "Игровые приставки",
+    likes: 0,
+    liked: false,
+    trash: false
+  },
+  {
+    id: 15,
+    name: "Xbox Series X",
+    url: "https://kaspi.kz/shop/p/xbox-series-x-1tb-chernyi-100824897/?c=750000000#!/item",
+    image: '/assets/images/xbox.jpg',
+    description: 'Refrigerator at your disposal',
+    rating: 5,
+    category: "Игровые приставки",
+    likes: 0,
+    liked: false,
+    trash: false
+  },
+  {
+    id: 16,
+    name: "Dendy Sup",
+    url: "https://kaspi.kz/shop/p/dendy-sup-620-igr-seryi-102222229/?c=750000000#!/item",
+    image: '/assets/images/dendy.jpg',
+    description: 'The legendary console of its time',
+    rating: 5,
+    category: "Игровые приставки",
+    likes: 0,
+    liked: false,
+    trash: false
+  },
+  {
+    id: 17,
+    name: "Бирюса 210KX 200л",
+    url: "https://kaspi.kz/shop/p/birjusa-210kx-200-l-belyi-2800630/?c=750000000#!/item",
+    image: '/assets/images/birusa.jpg',
+    description: 'Will freeze even a corpse!',
+    rating: 5,
+    category: "Бытовая техника",
+    likes: 0,
+    liked: false,
+    trash: false
+  },
+  {
+    id: 18,
+    name: "Artel HD 345RN Steel",
+    url: "https://kaspi.kz/shop/p/artel-hd-345rn-steel-seryi-100531318/?c=750000000#!/item",
+    image: '/assets/images/fridge.jpg',
+    description: 'Will freeze anything',
+    rating: 5,
+    category: "Бытовая техника",
+    likes: 0,
+    liked: false,
+    trash: false
+  },
+  {
+    id: 19,
+    name: "LG F2M5HS6S",
+    url: "https://kaspi.kz/shop/p/lg-f2m5hs6s-serebristyi-3601448/?c=750000000#!/item",
+    image: '/assets/images/lg.jpg',
+    description: 'Be on-trend with LG\'s fashionable washing machine',
+    rating: 5,
+    category: "Бытовая техника",
+    likes: 0,
+    liked: false,
+    trash: false
+  },
+  {
+    id: 20,
+    name: "Artel VCC 0220",
+    url: "https://kaspi.kz/shop/p/artel-vcc-0220-seryi-3701268/?c=750000000#!/item",
+    image: '/assets/images/vacuum.jpg',
+    description: 'Sucking up anything',
+    rating: 5,
+    category: "Бытовая техника",
+    likes: 0,
+    liked: false,
+    trash: false
+  },
+  {
+    id: 21,
+    name: "Vitek VT-8304",
+    url: "https://kaspi.kz/shop/p/vitek-vt-8304-chernyi-3800548/?c=750000000#!/item",
+    image: '/assets/images/iron.jpg',
+    description: 'You don\'t need to know how to iron',
+    rating: 5,
+    category: "Бытовая техника",
+    likes: 0,
+    liked: false,
+    trash: false
   }
   
 ];
