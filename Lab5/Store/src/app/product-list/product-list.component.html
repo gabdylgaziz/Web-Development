@@ -1,5 +1,4 @@
-
-<div *ngFor="let product of products" class="prod">
+<div *ngFor="let product of newProducts" class="prod">
   <div class="image">
     <img [src]="product.image">
   </div>
@@ -20,18 +19,17 @@
       <button type="button" (click)="share(product.name, product.url)">
         Поделиться
       </button>
-      <button>
-        Лайк
-      </button>
-      <button>
-        В корзину
-      </button>
     </div>
-    
+    <p>Amount of likes: {{product.likes}}</p>
+    <div class="like">
+      <div>
+        <a (click)="like()">
+          <img src="assets/images/like.png">
+        </a>
+        <a (click)="del(product.id)">
+          <img src="assets/images/trash.png">
+        </a>
+      </div>
+    </div>
   </div>
 </div>
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
--->

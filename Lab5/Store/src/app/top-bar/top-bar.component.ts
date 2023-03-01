@@ -11,15 +11,13 @@ import { categories } from '../category';
 })
 export class TopBarComponent {
   categories = categories
-  
-  category(){
-    alert("Hello world");
+
+  category(name: string){
+    console.log(this)
+    for (let i = 0; i < products.length; i++) {
+      if(products[i].category == name){
+        alert(products[i].name)
+      }
+    }
   }
 }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/

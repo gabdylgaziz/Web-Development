@@ -1,17 +1,25 @@
 export interface Category {
+    id: number;
     name: string;
 }
   
 export const categories = [
     {
+        id: 1,
         name: "Компьютеры и ноутбуки"
     },
     {
+        id: 2,
         name: "Смартфоны"
     },
     {
+        id: 3,
         name: "Игровые приставки"
-    }  
+    },
+    {
+        id: 4,
+        name: "Бытовая техника"
+    } 
 ];
   
   

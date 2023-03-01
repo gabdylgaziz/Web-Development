@@ -2,15 +2,16 @@
   <a [routerLink]="['/']">
     <h1>LOGO</h1>
   </a>
-  
   <ul>
     <li>
       <div class="dropdown">
         Все категории
         <div class="dropdown-content">
-          <a href="#" *ngFor="let cat of categories">  
-            {{ cat.name }} 
-          </a>
+          <div *ngFor="let cat of categories">  
+              <a [routerLink]="['/category',cat.name]">
+                {{ cat.name }} 
+              </a>
+          </div>
         </div>
       </div>
     </li>
