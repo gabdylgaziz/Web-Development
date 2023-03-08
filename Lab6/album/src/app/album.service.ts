@@ -7,31 +7,31 @@ import { Album, Photo } from "./AlbumTemplate";
   providedIn: 'root'
 })
 export class AlbumService {
-
+  JSON_URL = `https://jsonplaceholder.typicode.com/albums/`
   constructor(private client: HttpClient) { }
 
   getAlbums(): Observable<Album[]> {
-    return this.client.get<Album[]>(`https://jsonplaceholder.typicode.com/albums`);
+    return this.client.get<Album[]>(this.JSON_URL);
   }
 
   getAlbum(id: number): Observable<Album> {
-    return this.client.get<Album>(`https://jsonplaceholder.typicode.com/albums/${id}`);
+    return this.client.get<Album>(`${this.JSON_URL}${id}`);
   }
 
   updateAlbumTitle(album: Album): Observable<Album> {
-    return this.client.put<Album>(`https://jsonplaceholder.typicode.com/albums/${album.id}`, album);
+    return this.client.put<Album>(`${this.JSON_URL}${album.id}`, album);
   }
 
   deleteAlbum(id: number): Observable<Album> {
-    return this.client.delete<Album>(`https://jsonplaceholder.typicode.com/albums/${id}`);
+    return this.client.delete<Album>(`${this.JSON_URL}${id}`);
   }
 
   createAlbum(album: Album): Observable<Album> {
-    return this.client.post<Album>(`https://jsonplaceholder.typicode.com/albums`, album)
+    return this.client.post<Album>(`${this.JSON_URL}`, album)
   }
 
   getPhotos(id: number): Observable<Photo[]> {
-    return this.client.get<Photo[]>(`https://jsonplaceholder.typicode.com/albums/${id}/photos`)
+    return this.client.get<Photo[]>(`${this.JSON_URL}${id}/photos`)
   }
 
 }

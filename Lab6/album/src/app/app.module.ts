@@ -9,6 +9,7 @@ import { AppTopComponent } from './app-top/app-top.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AlbumsComponent } from './albums/albums.component';
+import { AlbumDetailsComponent } from './album-details/album-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AlbumsComponent } from './albums/albums.component';
     AppTopComponent,
     HomeComponent,
     AboutComponent,
-    AlbumsComponent
+    AlbumsComponent,
+    AlbumDetailsComponent
   ],
   imports: [
     BrowserModule,
