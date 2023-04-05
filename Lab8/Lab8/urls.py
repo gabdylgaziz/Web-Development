@@ -21,5 +21,9 @@ from shopback import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/products/', views.product_list),
+    path('api/products/<int:id>/', views.product),
+    path('api/categories/', views.categories),
+    path('api/categories/<int:id>/', views.category),
+    path('api/categories/<int:id>/products/', views.prod_in_cat),
 ]
 

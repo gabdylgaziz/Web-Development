@@ -5,7 +5,9 @@ from django.http import JsonResponse
 # Create your views here.
 def product_list(request):
     products = Product.objects.all()
-    data = {'products':list(products.values())}
+    data = {
+        'products': list(products.values())
+    }
     return JsonResponse(data)
 
 def product(request, id):
@@ -22,3 +24,25 @@ def product(request, id):
     }
     return JsonResponse(data)
 
+def category(request, id):
+    categories = Category.objects.all(id = id)
+    data = {
+        'category': {
+            'name': categories.name,
+        }
+    }
+    return JsonResponse(data)
+
+def categories(request):
+    categoriess = Category.objects.all()
+    data = {
+        'categories': list(categoriess.values())
+    }
+    return JsonResponse(data)
+
+def prod_in_cat(request, id):
+    prods = Product.objects.filter(category_id=id)
+    data = {
+        'products' : list(prods.values())
+    }
+    return JsonResponse(data)
