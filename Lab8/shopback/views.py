@@ -24,7 +24,7 @@ def product(request, id):
     return JsonResponse(data)
 
 def category(request, id):
-    categoriess = Category.objects.all(id = id)
+    categoriess = Category.objects.get(id = id)
     data = {
         'category': {
             'name': categoriess.name,
