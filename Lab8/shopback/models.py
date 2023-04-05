@@ -7,7 +7,7 @@ class Product(models.Model):
     description = models.TextField()
     count = models.IntegerField()
     is_active = models.BooleanField()
-    
+
     def __str__(self):
         return self.name
 

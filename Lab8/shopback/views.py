@@ -11,24 +11,23 @@ def product_list(request):
     return JsonResponse(data)
 
 def product(request, id):
-    product = Product.objects.get(id = id)
+    products = Product.objects.get(id = id)
     data = {
         'product': {
-            'name': product.name,
-            'price': product.price,
-            'description': product.description,
-            'count': product.count,
-            'is_active': product.is_active,
-            'category_id': product.category_id
+            'name': products.name,
+            'price': products.price,
+            'description': products.description,
+            'count': products.count,
+            'is_active': products.is_active,
         }
     }
     return JsonResponse(data)
 
 def category(request, id):
-    categories = Category.objects.all(id = id)
+    categoriess = Category.objects.all(id = id)
     data = {
         'category': {
-            'name': categories.name,
+            'name': categoriess.name,
         }
     }
     return JsonResponse(data)
@@ -41,7 +40,7 @@ def categories(request):
     return JsonResponse(data)
 
 def prod_in_cat(request, id):
-    prods = Product.objects.filter(category_id=id)
+    prods = Product.objects.filter(id = id)
     data = {
         'products' : list(prods.values())
     }
