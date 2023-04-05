@@ -48,3 +48,10 @@ def topTenSalaries(request):
         'vacancies': list(vacancies.values())
     }
     return JsonResponse(data, status=200)
+
+def getVacancyByCompany(request, id):
+    vacancies = Vacancy.objects.filter(company_id=id)
+    data = {
+        'vacancies': list(vacancies.values())
+    }
+    return JsonResponse(data, status=200)

@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/companies/', views.Companies),
     path('api/companies/<int:id>/', views.getCompany),
+    path('api/companies/<int:id>/vacancies', views.getVacancyByCompany),
     path('api/vacancies/', views.Vacancies),
     path('api/vacancies/<int:id>/', views.getVacancy),
     path('api/vacancies/top_ten/', views.topTenSalaries),
