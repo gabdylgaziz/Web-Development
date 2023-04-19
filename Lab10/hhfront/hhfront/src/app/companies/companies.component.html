@@ -1,1 +1,16 @@
-<p>companies works!</p>
+
+    
+  
+  <ul class="album">
+    <li *ngFor="let company of companies" class="lists">
+      <div>
+        <a [routerLink]="['/company', company.id]">
+          {{company.name}}
+        </a>
+      </div>
+      <div>
+        <button (click)="deleteCompany(company.id)">Delete</button>
+      </div>  
+    </li>
+  </ul>
+  
