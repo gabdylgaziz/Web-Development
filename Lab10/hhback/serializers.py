@@ -12,7 +12,7 @@ class CompanySerialize(serializers.Serializer):
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
-        fields = ('name', 'description', 'city', 'address')
+        fields = "__all__"
         
 class VacancySerialize(serializers.Serializer):
     id = serializers.IntegerField()
@@ -24,4 +24,4 @@ class VacancySerialize(serializers.Serializer):
 class VacancySerializer(serializers.ModelSerializer):
     class Meta:
         model = Vacancy
-        fields = ('name', 'description', 'salary', 'company')
+        fields = "__all__"
