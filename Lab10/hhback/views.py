@@ -77,3 +77,24 @@ class CompaniesClassBased(APIView):
         serializer.save()
 
         return JsonResponse(serializer.data)
+
+
+class companyById(APIView):
+    def get(self, request, id):
+        company = getCompany(id)
+        serializer = CompanySerializer(company)
+        return JsonResponse(serializer.data)
+
+    def put(self, request, id):
+        company = getCompany(id)
+        serializer = CompanySerializer(company, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return JsonResponse(serializer.data)
+
+    def delete(self, request, id):
+        company = getCompany(id)
+        company.delete()
+
+        return JsonResponse({'deleted': True})
