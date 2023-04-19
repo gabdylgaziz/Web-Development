@@ -22,7 +22,7 @@ from rest_framework.routers import DefaultRouter
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/companies/', views.CompaniesClassBased.as_view()),
-    path('api/companies/<int:id>/', views.getCompany),
+    path('api/companies/<int:id>/', views.CompanyById.as_view()),
     path('api/companies/<int:id>/vacancies', views.getVacancyByCompany),
     path('api/vacancies/', views.Vacancies),
     path('api/vacancies/<int:id>/', views.getVacancy),
