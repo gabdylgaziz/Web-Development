@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from .models import Company, Vacancy
 from django.http import JsonResponse
-from .serializers import CompanySerializer
+from .serializers import CompanySerializer, VacancySerializer, CompanySerialize, VacancySerialize
+from rest_framework import viewsets
+from rest_framework.response import Response
 
 # Create your views here.
+
+#func based views
 
 def Companies(request):
     companies = Company.objects.all()
@@ -56,3 +60,6 @@ def getVacancyByCompany(request, id):
         'vacancies': list(vacancies.values())
     }
     return JsonResponse(data, status=200)
+
+#class based views
+
